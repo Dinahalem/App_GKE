@@ -59,7 +59,7 @@ resource "google_container_node_pool" "spot" {
       effect = "NO_SCHEDULE"
     }
 
-    service_account = google_service_account.kubernetes.email
+    service_account = kubernetes@devops-v4-e2.iam.gserviceaccount.com
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]
