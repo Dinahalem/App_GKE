@@ -1,8 +1,8 @@
 #create a dedicated service account. 
 #create two node groups.
 
-resource "google_service_account" "kubernetes" {
-  account_id = "kubernetes@devops-v4-e2.iam.gserviceaccount.com"
+resource "google_service_account" "kube" {
+  account_id = "kube@devops-v4-e2.iam.gserviceaccount.com"
 }
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool
