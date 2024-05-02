@@ -2,7 +2,7 @@
 #create two node groups.
 
 resource "google_service_account" "kube" {
-  account_id = "kube@devops-v4-e2.iam.gserviceaccount.com"
+  account_id = "kube"
 }
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool
