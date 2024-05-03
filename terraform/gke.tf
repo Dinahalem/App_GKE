@@ -15,7 +15,7 @@ variable "gke_num_nodes" {
 # GKE cluster
 resource "google_container_cluster" "primary" {
   name     = "${var.project_id}-gke-primary"
-  location = var.region
+  location = "us-central1-f"
   
   # We can't create a cluster with no node pool defined, but we want to only use
   # separately managed node pools. So we create the smallest possible default
@@ -35,7 +35,7 @@ resource "google_container_cluster" "primary" {
 # Separately Managed Node Pool
 resource "google_container_node_pool" "primary_nodes" {
   name       = google_container_cluster.primary.name
-  location   = var.region
+  location   = "us-central1-f"
   cluster    = google_container_cluster.primary.name
   node_count = var.gke_num_nodes
 
@@ -69,7 +69,7 @@ resource "google_container_node_pool" "primary_nodes" {
 # Second GKE cluster
 resource "google_container_cluster" "secondary" {
   name     = "${var.project_id}-gke-secondary"
-  location = var.region
+  location = "us-central1-f"
   
   # We can't create a cluster with no node pool defined, but we want to only use
   # separately managed node pools. So we create the smallest possible default
@@ -89,7 +89,7 @@ resource "google_container_cluster" "secondary" {
 # Node pool for the second cluster
 resource "google_container_node_pool" "secondary_nodes" {
   name       = "${google_container_cluster.secondary.name}-nodes"
-  location   = var.region
+  location   = "us-central1-f"
   cluster    = google_container_cluster.secondary.name
   node_count = var.gke_num_nodes
 
