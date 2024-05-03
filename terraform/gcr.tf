@@ -1,4 +1,5 @@
 resource "google_container_registry" "my_registry" {
-  name = "gke-repo" 
+  name          = "gke-repo" 
+  region        = var.region
 }
 
