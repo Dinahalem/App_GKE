@@ -21,7 +21,7 @@ jobs:
         export_default_credentials: true
 
     - name: Build Docker Image
-      run: docker build -t $IMAGE_NAME:latest App_GKE/app1/Dockerfile
+      run: docker build -t $IMAGE_NAME:latest ./app1
 
     - name: Automatic Tagging of Releases
       id: increment-git-tag
