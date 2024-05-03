@@ -59,4 +59,11 @@ resource "google_container_node_pool" "primary_nodes" {
     disk_size_gb = 50  # Adjust the disk size as needed, reducing it to 50 GB
     disk_type    = "pd-standard"  # Use standard persistent disks
   }
+  lifecycle {
+    ignore_changes = [
+      # Add any attributes here that might change after creation
+    ]
+
+    on_failure = "continue"  # Ignore failure and continue execution
+  }
 }
