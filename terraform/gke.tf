@@ -26,6 +26,11 @@ resource "google_container_cluster" "primary" {
 
   network    = google_compute_network.vpc.name
   subnetwork = google_compute_subnetwork.subnet.name
+
+  node_config {
+    disk_size_gb = 50  # Adjust the disk size as needed, reducing it to 50 GB
+    disk_type    = "pd-standard"  # Use standard persistent disks
+  }
 }
 
 # Separately Managed Node Pool
