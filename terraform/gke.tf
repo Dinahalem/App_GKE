@@ -79,6 +79,11 @@ resource "google_container_cluster" "secondary" {
 
   network    = google_compute_network.vpc.name
   subnetwork = google_compute_subnetwork.subnet.name
+
+  node_config {
+  disk_size_gb = 50  # Adjust the disk size as needed, reducing it to 50 GB
+  disk_type    = "pd-standard"  # Use standard persistent disks
+  }
 }
 
 # Node pool for the second cluster
@@ -104,5 +109,12 @@ resource "google_container_node_pool" "secondary_nodes" {
     metadata = {
       disable-legacy-endpoints = "true"
     }
+    disk_size_gb = 50  # Adjust the disk size as needed, reducing it to 50 GB
+    disk_type    = "pd-standard"  # Use standard persistent disks
+  }
+  lifecycle {
+    ignore_changes = [
+      initial_node_count
+    ]
   }
 }
