@@ -1,5 +1,5 @@
-resource "google_container_registry" "my_registry" {
-  name          = "gke-repo" 
-  region        = var.region
+resource "google_container_registry_repository" "my_repository" {
+  project  = "${var.project_id}" 
+  name     = "gke-repo"         
 }
 
