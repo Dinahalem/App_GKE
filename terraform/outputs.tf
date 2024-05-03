@@ -17,3 +17,8 @@ output "kubernetes_cluster_host" {
   value       = google_container_cluster.primary.endpoint
   description = "GKE Cluster Host"
 }
+
+output "gcr_url" {
+  value = google_container_registry.my_registry.name
+}
+
