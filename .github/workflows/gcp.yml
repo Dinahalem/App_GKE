@@ -5,11 +5,11 @@ on:
     branches: [ main ]
 jobs:
   build-push-gcr:
-    #name: Build and Push to GCP
-    #runs-on: ubuntu-latest
-    #env:
-      #IMAGE_NAME: quickstart-image
-      #PROJECT_ID: devops-v4-e2
+    name: Build and Push to GCP
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: quickstart-image
+      PROJECT_ID: devops-v4-e2
     steps:
     - name: Checkout
       uses: actions/checkout@v2
