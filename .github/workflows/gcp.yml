@@ -5,11 +5,11 @@ on:
     branches: [ main ]
 jobs:
   build-push-gcr:
-    name: Build and Push to GCP
-    runs-on: ubuntu-latest
-    env:
-      IMAGE_NAME: quickstart-image
-      PROJECT_ID: devops-v4-e2
+    #name: Build and Push to GCP
+    #runs-on: ubuntu-latest
+    #env:
+      #IMAGE_NAME: quickstart-image
+      #PROJECT_ID: devops-v4-e2
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
         export_default_credentials: true
 
     - name: Build Docker Image
-      run: docker build -t $IMAGE_NAME:latest .
+      run: docker build -t $IMAGE_NAME:latest App_GKE/app1/Dockerfile
 
     - name: Automatic Tagging of Releases
       id: increment-git-tag
