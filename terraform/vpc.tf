@@ -9,7 +9,7 @@ variable "region" {
 provider "google" {
   project = var.project_id
   region  = var.region
-  credentials = file("devops-v4-e2-6b462698b1f1.json")
+  credentials = file("service-account.json")
 }
 
 # VPC
