@@ -1,26 +1,28 @@
-#enable compute API
-resource "google_project_service" "compute" {
-  project = "devops-v4-e2"
-  service = "compute.googleapis.com"
+variable "project_id" {
+  description = "project id"
 }
 
-resource "google_project_service" "container" {
-  project = "devops-v4-e2"
-  service = "container.googleapis.com"
+variable "region" {
+  description = "region"
 }
 
+provider "google" {
+  project = var.project_id
+  region  = var.region
+  credentials = file("devops-v4-e2-6b462698b1f1.json")
+}
 
-resource "google_compute_network" "main" {
-  project                         = "devops-v4-e2"
-  name                            = "main"
-  routing_mode                    = "REGIONAL"
-  auto_create_subnetworks         = false
-  mtu                             = 1460
-  delete_default_routes_on_create = false
+# VPC
+resource "google_compute_network" "vpc" {
+  name                    = "${var.project_id}-vpc"
+  auto_create_subnetworks = "false"
+}
 
-  depends_on = [
-    google_project_service.compute,
-    google_project_service.container
-  ]
+# Subnet
+resource "google_compute_subnetwork" "subnet" {
+  name          = "${var.project_id}-subnet"
+  region        = var.region
+  network       = google_compute_network.vpc.name
+  ip_cidr_range = "10.10.0.0/24"
 }
 
