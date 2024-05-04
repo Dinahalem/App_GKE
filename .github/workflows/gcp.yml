@@ -17,7 +17,7 @@ jobs:
       uses: google-github-actions/setup-gcloud@main
       with:
         project_id: ${{ secrets.GOOGLE_PROJECT }}
-        service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+        service_account_key: ${{ secrets.NEW_SERVICE }}
         export_default_credentials: true
 
     - name: build and push the docker image
@@ -25,5 +25,5 @@ jobs:
         GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
       run: |
         gcloud auth configure-docker us-central1-docker.pkg.dev
-        docker build -t us-central1-docker.pkg.dev/$GOOGLE_PROJECT/gke-repo/quickstart-image:latest ./app1
-        docker push us-central1-docker.pkg.dev/$GOOGLE_PROJECT/gke-repo/quickstart-image:latest
+        docker build -t us-central1-docker.pkg.dev/$GOOGLE_PROJECT/demo/quickstart-image:latest ./app1
+        docker push us-central1-docker.pkg.dev/$GOOGLE_PROJECT/demo/quickstart-image:latest
