@@ -19,7 +19,7 @@ steps:
   - -xe
   - -c
   - |
-    gcloud deploy apply --file kubernetes/app1.yaml --region=us-central1
+    gcloud deploy apply --file kubernetes/app1.yaml --region=us-central1-f
     #gcloud deploy apply --file deploy/dev.yaml --region=us-central1
     #gcloud deploy releases create 'app-release-${SHORT_SHA}' --delivery-pipeline=demo-btdnncd --region=us-central1 --skaffold-file=skaffold.yaml
 
