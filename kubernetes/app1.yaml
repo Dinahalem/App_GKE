@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: us-central1-docker.pkg.dev/hidden-phalanx-422115-e1/gke-repo/quickstart-image
+          image: us-central1-docker.pkg.dev/devops-v4-e2/gke-repo/quickstart-image
           ports:
             - containerPort: 8080
 
