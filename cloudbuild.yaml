@@ -12,7 +12,6 @@ steps:
 
 
 
-steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-east4-docker.pkg.dev/devops-v4-e2/gke-repo/quickstart-image', './app1' ]
   id: 'Build Docker Image'
