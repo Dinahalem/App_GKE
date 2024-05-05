@@ -20,12 +20,12 @@ output "kubernetes_cluster_host" {
 }
 
 
-output "kubernetes_cluster_name" {
+output "kubernetes_cluster_name2" {
   value       = google_container_cluster.secondary.name
   description = "GKE Cluster Name"
 }
 
-output "kubernetes_cluster_host" {
+output "kubernetes_cluster_host2" {
   value       = google_container_cluster.secondary.endpoint
   description = "GKE Cluster Host"
 }
