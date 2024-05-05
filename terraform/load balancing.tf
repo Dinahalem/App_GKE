@@ -17,7 +17,6 @@ resource "google_compute_url_map" "url_map" {
 
 resource "google_compute_backend_service" "backend_service" {
   name = "example-backend-service"
-  port = "80"
 
   # Using the instance_group_urls from the managed instance group of the primary node pool
   backend {
