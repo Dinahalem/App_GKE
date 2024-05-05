@@ -30,6 +30,6 @@ resource "google_compute_subnetwork" "subnet_secondary" {
   name          = "${var.project_id}-subnet"
   region        = var.region
   network       = google_compute_network.vpc.name
-  ip_cidr_range = "10.10.0.0/24"
+  ip_cidr_range = "10.10.1.0/24"
 }
 
