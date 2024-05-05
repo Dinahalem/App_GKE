@@ -19,7 +19,14 @@ resource "google_compute_backend_service" "backend_service" {
   name = "example-backend-service"
   port = "80"
 
+  # Using the instance_group_urls from the managed instance group of the primary node pool
   backend {
-    group = google_container_cluster.primary.instance_group_urls[0]
+    group = google_container_node_pool.primary.node_config[0].instance_group_urls[0]
+  }
+
+  # Adding backend for the secondary node pool
+  backend {
+    group = google_container_node_pool.secondary.node_config[0].instance_group_urls[0]
   }
 }
+
