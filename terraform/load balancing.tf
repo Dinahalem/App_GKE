@@ -21,12 +21,13 @@ resource "google_compute_backend_service" "backend_service" {
 
   # Using the instance_group_urls from the managed instance group of the primary node pool
   backend {
-    group = google_container_node_pool.primary_nodes.node_config[0].instance_group_urls[0]
+    group = google_container_node_pool.primary_nodes.instance_group_urls[0]
   }
 
   # Adding backend for the secondary node pool
   backend {
-    group = google_container_node_pool.secondary_nodes.node_config[0].instance_group_urls[0]
+    group = google_container_node_pool.secondary_nodes.instance_group_urls[0]
   }
 }
+
 
