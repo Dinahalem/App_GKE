@@ -4,7 +4,7 @@
 resource "google_compute_firewall" "allow-ssh" {
   name    = "allow-ssh"
   #network = google_compute_network.main.name
-  network = "default"
+  network = google_compute_network.vpc.name
 
   allow {
     protocol = "tcp"
@@ -17,7 +17,8 @@ resource "google_compute_firewall" "allow-ssh" {
 
 resource "google_compute_firewall" "allow-internal" {
   name    = "allow-internal"
-  network = "default"
+  #network = "default"
+  network = google_compute_network.vpc.name
 
   allow {
     protocol = "tcp"
@@ -29,7 +30,8 @@ resource "google_compute_firewall" "allow-internal" {
 
 resource "google_compute_firewall" "allow-external" {
   name    = "allow-external"
-  network = "default"
+  #network = "default"
+  network = google_compute_network.vpc.name
 
   allow {
     protocol = "tcp"
