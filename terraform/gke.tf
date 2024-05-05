@@ -80,7 +80,8 @@ resource "google_container_cluster" "secondary" {
   initial_node_count       = 1
 
   network    = google_compute_network.vpc.name
-  subnetwork = google_compute_subnetwork.subnet.name
+  subnetwork = google_compute_subnetwork.subnet_secondary.name
+  #subnetwork = google_compute_subnetwork.subnet.name
 
   node_config {
   disk_size_gb = 50  # Adjust the disk size as needed, reducing it to 50 GB
