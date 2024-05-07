@@ -1,2 +1,2 @@
-project_id = "devops-v4-e2"
+project_id = "gke-cicd-422619"
 region     = "us-central1"
