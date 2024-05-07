@@ -1,10 +1,10 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/gke-cicd-422619/gke-repo/quickstart-image', './app1' ]
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/gke-cicd-422619/primary-repo/quickstart-image', './app1' ]
   id: 'Build Docker Image 1'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/gke-cicd-422619/gke-repo/quickstart-image' ]
+  args: ['push', 'us-central1-docker.pkg.dev/gke-cicd-422619/primary-repo/quickstart-image' ]
   id: 'Push Docker Image 1'
 
 - name: 'gcr.io/cloud-builders/docker'
