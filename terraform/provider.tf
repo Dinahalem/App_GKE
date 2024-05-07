@@ -6,7 +6,7 @@
 #create bucket to store terraform state
 terraform {
   backend "gcs" {
-    bucket = "dina-tf-state-staging"
+    bucket = "dina-tf-state-gkecicd"
     prefix = "terraform/state"
   }
   required_providers {
