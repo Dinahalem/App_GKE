@@ -90,7 +90,7 @@ resource "google_container_cluster" "secondary" {
 }
 
 # Node pool for the second cluster
-resource "google_container_node_pool" "secondary_nodes" {
+resource "google_container_node_pool" "secondary_preemptible_nodes" {
   name       = "nodepool-secondary-cluster"
   location   = "us-east4-b"
   cluster    = google_container_cluster.secondary.name
