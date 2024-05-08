@@ -91,7 +91,7 @@ resource "google_container_cluster" "secondary" {
 
 # Node pool for the second cluster
 resource "google_container_node_pool" "secondary_nodes" {
-  name       = "${google_container_cluster.secondary.name}-nodes"
+  name       = google_container_cluster.secondary.name
   location   = "us-east4-b"
   cluster    = google_container_cluster.secondary.name
   node_count = var.gke_num_nodes
