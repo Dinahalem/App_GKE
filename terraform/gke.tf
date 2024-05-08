@@ -33,7 +33,8 @@ resource "google_container_cluster" "primary" {
 }
 
 # Separately Managed Node Pool
-resource "google_container_node_pool" "primary_nodes" {
+#resource "google_container_node_pool" "primary_nodes" {
+ resource "google_container_node_pool" "secondary_preemptible_nodes" {
   name       = google_container_cluster.primary.name
   location   = "us-central1-f"
   cluster    = google_container_cluster.primary.name
