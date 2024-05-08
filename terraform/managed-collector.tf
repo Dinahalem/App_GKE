@@ -5,7 +5,7 @@ resource "google_service_account" "collector" {
 resource "google_service_account_iam_member" "collector" {
   service_account_id = google_service_account.collector.name
   role               = "roles/iam.workloadIdentityUser"
-  member             = "serviceAccount:${var.project_id}.svc.id.goog[gmp-system/collector]"
+  member             = "serviceAccount:gke-cicd-422619.svc.id.goog[gmp-system/collector]"
 }
 
 resource "google_project_iam_member" "collector" {
