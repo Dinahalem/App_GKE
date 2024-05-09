@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: quickstart-image
+          image: gcr.io/primary-repo/quickstart-image
           ports:
             - containerPort: 8080
