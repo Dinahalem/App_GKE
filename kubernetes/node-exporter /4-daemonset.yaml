@@ -19,7 +19,7 @@ spec:
       labels:
         app: node-exporter
     spec:
-      serviceAccountName: node-exporter
+      serviceAccountName: service-account
       securityContext:
         runAsNonRoot: true
         runAsUser: 65534
