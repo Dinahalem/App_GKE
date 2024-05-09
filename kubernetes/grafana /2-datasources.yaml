@@ -10,7 +10,7 @@ data:
     datasources:
     - name: PrometheusUI
       type: prometheus
-      url: http://frontend.monitoring:8080
+      url: http://frontend.monitoring:9090
       isDefault: true
       jsonData:
         manageAlerts: false
