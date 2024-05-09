@@ -10,4 +10,4 @@ spec:
     app: frontend
   ports:
   - name: web
-    port: 8080
+    port: 9090
