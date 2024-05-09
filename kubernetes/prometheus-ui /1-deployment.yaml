@@ -19,11 +19,11 @@ spec:
       - name: frontend
         image: us-central1-docker.pkg.dev/gke-cicd-422619/primary-repo/quickstart-image
         args:
-        - --web.listen-address=:8080
+        - --web.listen-address=:9090
         - --query.project-id=gke-cicd-422619 
         ports:
         - name: web
-          containerPort: 8080
+          containerPort: 9090
         readinessProbe:
           httpGet:
             path: /-/ready
