@@ -17,7 +17,7 @@ spec:
       serviceAccountName: service-account
       containers:
       - name: frontend
-        image: quickstart-image
+        image: us-central1-docker.pkg.dev/gke-cicd-422619/primary-repo/quickstart-image
         args:
         - --web.listen-address=:8080
         - --query.project-id=gke-cicd-422619 
