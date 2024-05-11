@@ -14,7 +14,7 @@ spec:
       labels:
         app: frontend
     spec:
-      serviceAccountName: service-account
+      serviceAccountName: prometheus-ui
       containers:
       - name: frontend
         image: us-central1-docker.pkg.dev/gke-cicd-422619/primary-repo/quickstart-image
