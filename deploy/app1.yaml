@@ -13,9 +13,10 @@ spec:
       labels:
         app: my-app
     spec:
-      serviceAccountName: service-account
+      #serviceAccountName: service-account
       containers:
         - name: my-container
-          image: us-central1-docker.pkg.dev/gke-cicd-422619/primary-repo/quickstart-image
+          image: dina2022/quickstart
+          #image: us-central1-docker.pkg.dev/gke-cicd-422619/primary-repo/quickstart-image
           ports:
             - containerPort: 8080
