@@ -13,6 +13,7 @@ spec:
       labels:
         app: my-app
     spec:
+      serviceAccountName: service-account
       containers:
         - name: my-container
           image: gcr.io/gke-cicd-422619/myapp1:v1.0
