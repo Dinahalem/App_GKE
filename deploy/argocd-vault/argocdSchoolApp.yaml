@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: schoolapp
-    server: 'https://kubernetes.default.svc'
+    server: 'https://kubernetes.default.svc'   
   source:
     path: schoolapp-subchart
     repoURL: 'https://github.com/samgabrail/argocd-vault.git'
