@@ -2,7 +2,7 @@
 Steps:
 ___________________________________________________________________________________________________________________________________________________________________
 
-1. create service account on google cloud and add key to use it in the project.
+1.Create Service account on google cloud and add key to use it in the project.
 
 2.Terraform:
   Create infrastructure as code (Iac) by using terraform on Google cloud (GCP) 
