@@ -1,8 +1,30 @@
 # App_GKE
-Steps:
+
+Technologies:
+_________________________________________________________________________________________________________________________________________________________________
+.Teraform
+.Argocd
+.Prometheus
+.Grafana
+.Docker
+.Python
+
+Features:
+_________________________________________________________________________________________________________________________________________________________________
+- A kubernetes architecture on gcp considering publishing the application using the load balancing and security best practices.
+- Deployment of you application from VCS and source repository should be fully automated where any change to the code results with changing the
+  application on the production environment (google cloud build).
+- The CD part of your application should use a GitOps approach where your kubernetes should bring the container from the source artifacts.
+- Your application should be based on multiple clusters, segregation management and application workloads.
+- Monitoring and logging observations functionality should be added ( grafana, prometheus)
+- You architecture should follow VPC design and security best practices.
+- Your architecture should follow IaC best practices while deploying your architecture in a fully code-based and automated approach, changes to IaC
+  code should be automatically reflected to your environment.
+_________________________________________________________________________________________________________________________________________________________________
+Steps for Project:
 ___________________________________________________________________________________________________________________________________________________________________
 
-1.Create Service account on google cloud and add key to use it in the project.
+1.Create Service account on google cloud and add key to use it in the project, also Create cloud storage for backend statefile of terraform.
 
 2.Terraform:
   Create infrastructure as code (Iac) by using terraform on Google cloud (GCP) 
