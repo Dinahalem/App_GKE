@@ -46,7 +46,7 @@ ________________
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________
 
-5. Install Prometheus, node exporter & Grafana to monitor and log observations functionality. 
+5.Install Prometheus, node exporter & Grafana to monitor and log observations functionality. 
 
 
 *gcloud container clusters get-credentials gke-cicd-422619-gke-primary --zone us-central1-f --project gke-cicd-422619   #connect primary cluster
