@@ -3,7 +3,7 @@ Project
 Deploy GKE Cluster on GCP Using Terraform, Automated Using ArgoCD
 
 Technologies:
-_________________________________________________________________________________________________________________________________________________________________
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Teraform
 2. Argocd
 3. Prometheus
@@ -12,7 +12,7 @@ ________________________________________________________________________________
 6. Python
 
 Features:
-_________________________________________________________________________________________________________________________________________________________________
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - A kubernetes architecture on gcp considering publishing the application using the load balancing and security best practices.
 - Deployment of you application from VCS and source repository should be fully automated where any change to the code results with changing the
   application on the production environment (google cloud build).
@@ -24,8 +24,7 @@ ________________________________________________________________________________
   code should be automatically reflected to your environment.
 _________________________________________________________________________________________________________________________________________________________________
 Steps for Project:
-___________________________________________________________________________________________________________________________________________________________________
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1.Create Service account on google cloud and add key to use it in the project, also Create cloud storage for backend statefile of terraform.
 
 2.Terraform:
@@ -48,10 +47,8 @@ ________________________________________________________________________________
 *kubectl config use- context add [primary name] #switch to primary cluster
 *Kubectl config current-context
 
-
-then:
 Install Argo CD:
-________________
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 *kubectl create namespace argocd
 
 *kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
