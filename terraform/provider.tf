@@ -11,7 +11,7 @@ provider "google-beta" {
 #create bucket to store terraform state
 terraform {
   backend "gcs" {
-    bucket = "dina-tf-state-gkecicd"
+    bucket = "appgke"
     prefix = "terraform/state"
   }
   required_providers {
